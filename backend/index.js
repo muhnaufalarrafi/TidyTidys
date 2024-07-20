@@ -5,9 +5,10 @@ import dotenv from "dotenv";
 import db from "./config/Database.js";
 import SequelizeStore from "connect-session-sequelize";
 import UserRoute from "./routes/UserRoute.js";
-import ServiceRoute from "./routes/ServiceRoute.js";
-import CompanyProfileRoute from "./routes/CompanyProfileRoute.js";
 import AuthRoute from "./routes/AuthRoute.js";
+import CompanyProfileRoute from "./routes/CompanyProfileRoute.js";
+import ServiceRoute from "./routes/ServiceRoute.js";
+
 dotenv.config();
 
 const app = express();
@@ -18,14 +19,13 @@ const store = new sessionStore({
     db: db
 });
 
-(async()=>{
-     await db.sync();
-})();
-
+// (async()=>{
+//     await db.sync();
+// })();
 
 app.use(session({
-    secret: process.env.SESS_SECRET,
-    resave: false,
+    secret : process.env.SESS_SECRET,
+    resave : false,
     saveUninitialized: true,
     store: store,
     cookie: {
@@ -35,17 +35,17 @@ app.use(session({
 
 app.use(cors({
     credentials: true,
-    origin: 'http://localhost:3000'
+    origin: 'http://127.0.0.1:8080' // Ganti dengan asal frontend Anda
 }));
 
 app.use(express.json());
 app.use(UserRoute);
-app.use(ServiceRoute);
-app.use(CompanyProfileRoute);
 app.use(AuthRoute);
+app.use(CompanyProfileRoute);
+app.use(ServiceRoute);
 
 // store.sync();
 
-app.listen(process.env.APP_PORT, () => {
+app.listen(process.env.APP_PORT, ()=> {
     console.log("Server Up And running ...");
 });
