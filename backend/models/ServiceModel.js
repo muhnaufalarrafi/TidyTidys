@@ -1,9 +1,10 @@
 import { Sequelize } from "sequelize";
 import db from "../config/Database.js";
+import CompanyProfiles from "./CompanyProfileModel.js";
 
 const { DataTypes } = Sequelize;
 
-const Users = db.define('users', {
+const Services = db.define('service', {
     uuid: {
         type: DataTypes.STRING,
         defaultValue: DataTypes.UUIDV4,
@@ -20,23 +21,22 @@ const Users = db.define('users', {
             len: [3, 100]
         }
     },
-    email: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-            notEmpty: true,
-            isEmail: true
-        }
-    },
-    password: {
-        type: DataTypes.STRING,
+    price: {
+        type: DataTypes.INTEGER,
         allowNull: false,
         validate: {
             notEmpty: true,
         }
     },
-    role: {
-        type: DataTypes.STRING,
+    details: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        validate: {
+            notEmpty: true,
+        }
+    },
+    companyId: {
+        type: DataTypes.INTEGER,
         allowNull: false,
         validate: {
             notEmpty: true,
@@ -46,4 +46,7 @@ const Users = db.define('users', {
     freezeTableName: true
 });
 
-export default Users;
+CompanyProfiles.hasMany(Services, { foreignKey: 'companyId' });
+Services.belongsTo(CompanyProfiles, { foreignKey: 'companyId' });
+
+export default Services;
