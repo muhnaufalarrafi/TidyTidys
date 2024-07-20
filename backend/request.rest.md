@@ -346,3 +346,124 @@
       "msg": "Delete Company Profile Sukses"
     }
     ```
+
+
+
+## Services
+
+### Get All Services
+
+- **URL:** `/services`
+- **Method:** `GET`
+- **Headers:**
+  - `Authorization: Bearer <token>`
+- **Success Response:**
+  - **Code:** 200
+  - **Content:**
+    ```json
+    [
+      {
+        "uuid": "service-uuid",
+        "name": "Service Name",
+        "price": 300000,
+        "details": "Service Details",
+        "CompanyProfile": {
+          "name": "Company Name",
+          "address": "Company Address",
+          "phone": "081234567890"
+        }
+      },
+      ...
+    ]
+    ```
+
+### Get Service by ID
+
+- **URL:** `/services/:id`
+- **Method:** `GET`
+- **Headers:**
+  - `Authorization: Bearer <token>`
+- **Success Response:**
+  - **Code:** 200
+  - **Content:**
+    ```json
+    {
+      "uuid": "service-uuid",
+      "name": "Service Name",
+      "price": 300000,
+      "details": "Service Details",
+      "CompanyProfile": {
+        "name": "Company Name",
+        "address": "Company Address",
+        "phone": "081234567890"
+      }
+    }
+    ```
+
+### Create Service (Admin or Mitra Only)
+
+- **URL:** `/services`
+- **Method:** `POST`
+- **Headers:**
+  - `Authorization: Bearer <admin-or-mitra-token>`
+  - `Content-Type: application/json`
+- **Body:**
+  ```json
+  {
+    "name": "Service Name",
+    "price": 300000,
+    "details": "Service Details"
+  }
+  ```
+- **Success Response:**
+  - **Code:** 201
+  - **Content:**
+    ```json
+    {
+      "msg": "Service Created Successfully"
+    }
+    ```
+
+### Update Service (Admin or Mitra Only)
+
+- **URL:** `/services/:id`
+- **Method:** `PATCH`
+- **Headers:**
+  - `Authorization: Bearer <admin-or-mitra-token>`
+  - `Content-Type: application/json`
+- **Body:**
+  ```json
+  {
+    "name": "Service Name Updated",
+    "price": 350000,
+    "details": "Service Details Updated"
+  }
+  ```
+- **Success Response:**
+  - **Code:** 200
+  - **Content:**
+    ```json
+    {
+      "msg": "Update Service Sukses"
+    }
+    ```
+
+### Delete Service (Admin or Mitra Only)
+
+- **URL:** `/services/:id`
+- **Method:** `DELETE`
+- **Headers:**
+  - `Authorization: Bearer <admin-or-mitra-token>`
+- **Success Response:**
+  - **Code:** 200
+  - **Content:**
+    ```json
+    {
+      "msg": "Delete Service Sukses"
+    }
+    ```
+
+## Authentication & Authorization
+
+- Semua endpoint (kecuali `/login`) membutuhkan header `Authorization` dengan format `Bearer <token>` untuk memastikan bahwa permintaan dibuat oleh pengguna yang terautentikasi.
+- Endpoint tertentu memiliki batasan akses berdasarkan peran pengguna (`admin`, `mitra`, atau `user`).
