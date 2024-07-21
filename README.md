@@ -27,7 +27,7 @@ Setelah mengunduh proyek ini, ikuti langkah-langkah berikut untuk menjalankannya
    ```sh
    nodemon index
 
-Server akan berjalan di `http://localhost:3000` (atau port yang telah Anda tentukan dalam konfigurasi).
+Server akan berjalan di `http://localhost:5000` (atau port yang telah Anda tentukan dalam konfigurasi).
 
 ## Frontend
 
@@ -58,5 +58,5 @@ Untuk menjalankan proyek ini, ikuti langkah-langkah berikut:
    ```sh
    live-server
 
-## Server backend akan berjalan di `http://localhost:3000` (atau port yang telah Anda tentukan), 
+## Server backend akan berjalan di `http://localhost:5000` (atau port yang telah Anda tentukan), 
 ## dan server `frontend` akan berjalan di `http://localhost:8080` (atau port default live-server).
