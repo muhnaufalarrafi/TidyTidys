@@ -1,16 +1,37 @@
+# Project Setup Instructions
 
-when you already download this file you can just run this prompt
+Setelah mengunduh proyek ini, ikuti langkah-langkah berikut untuk menjalankannya.
 
-setting path
-## Cd BackEnd
-Install Packages
-## npm install
-Run Server
-## nodemon index
+## Setting Path
 
+### Backend
 
-setting path in new terminal
-##Cd Frontend
-## npm install -g live-server
-Run FrontEnd
-## live-server
+1. **Navigasi ke direktori Backend:**
+   ```sh
+   cd BackEnd
+Install Packages:
+
+sh
+Copy code
+npm install
+Jalankan Server:
+
+sh
+Copy code
+nodemon index
+Frontend
+Buka terminal baru dan navigasi ke direktori Frontend:
+
+sh
+Copy code
+cd FrontEnd
+Install live-server secara global:
+
+sh
+Copy code
+npm install -g live-server
+Jalankan live-server:
+
+sh
+Copy code
+live-server
