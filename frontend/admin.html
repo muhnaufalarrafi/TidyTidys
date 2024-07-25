@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+    <div class="sidebar" id="sidebar">
+        <li><a href="#" class="profile">
+            <img src="images/profile.jpg" alt="User Profile" class="profile-image">
+            <div class="profile-info">
+                <span class="username">Rachel</span>
+                <span class="role">Admin</span>
+            </div>
+        </a></li>
+        <a href="#">Dashboard</a>
+        <a href="#">User Management</a>
+        <a href="#">Platform Performance</a>
+        <a href="#">Transactions</a>
+        <a href="#">Support Requests</a>
+        <a href="#">Mitra Management</a>
+        <button class="btn btn-dark btn-logout">Logout</button>
+    </div>
+    <div class="content">
+        <div class="navbar">
+            <div class="menu-icon-wrapper">
+                <img src="https://cdn-icons-png.flaticon.com/512/11394/11394404.png" alt="Menu Icon" class="menu-icon">
+            </div>
+            <h1>Dashboard</h1>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">User Activity</h5>
+                        <canvas id="userActivityChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Platform Performance</h5>
+                        <canvas id="platformPerformanceChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>

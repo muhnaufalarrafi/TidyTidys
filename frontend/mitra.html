@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mitra Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/mitra.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+    <div class="sidebar" id="sidebar">
+        <li><a href="#" class="profile">
+            <img src="images/profile.jpg" alt="User Profile" class="profile-image">
+            <div class="profile-info">
+                <span class="username"></span>
+                <span class="role">Mitra</span>
+            </div>
+        </a></li>
+        <a href="#">Create Listings</a>
+        <a href="#">Set Pricing</a>
+        <a href="#">Manage Orders</a>
+        <button class="btn btn-dark btn-logout">Logout</button>
+    </div>
+    <div class="content">
+        <div class="navbar">
+            <div class="menu-icon-wrapper">
+                <img src="https://cdn-icons-png.flaticon.com/512/11394/11394404.png" alt="Menu Icon" class="menu-icon">
+            </div>
+            <h1>Dashboard</h1>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Notifications</h5>
+                <table class="table table-bordered notification-table">
+                    <thead class="thead-light">
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Customer Name</th>
+                            <th>Service</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1001</td>
+                            <td>John Doe</td>
+                            <td>Home Cleaning</td>
+                            <td>Pending</td>
+                            <td>
+                                <button class="btn btn-sm btn-primary"><i class="fas fa-eye"></i> View</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1002</td>
+                            <td>Jane Smith</td>
+                            <td>Carpet Cleaning</td>
+                            <td>In Progress</td>
+                            <td>
+                                <button class="btn btn-sm btn-primary"><i class="fas fa-eye"></i> View</button>
+                            </td>
+                        </tr>
+                        <!-- More rows as needed -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Manage Listings</h5>
+                <table class="table table-bordered listing-table">
+                    <thead class="thead-light">
+                        <tr>
+                            <th>ID</th>
+                            <th>Service</th>
+                            <th>Description</th>
+                            <th>Price</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Home Cleaning</td>
+                            <td>Standard home cleaning services</td>
+                            <td>$100</td>
+                            <td>
+                                <button class="btn btn-sm btn-warning"><i class="fas fa-edit"></i> Edit</button>
+                                <button class="btn btn-sm btn-danger"><i class="fas fa-trash-alt"></i> Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Carpet Cleaning</td>
+                            <td>Deep cleaning of carpets</td>
+                            <td>$150</td>
+                            <td>
+                                <button class="btn btn-sm btn-warning"><i class="fas fa-edit"></i> Edit</button>
+                                <button class="btn btn-sm btn-danger"><i class="fas fa-trash-alt"></i> Delete</button>
+                            </td>
+                        </tr>
+                        <!-- More rows as needed -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="js/mitra.js"></script>
+</body>
+</html>
