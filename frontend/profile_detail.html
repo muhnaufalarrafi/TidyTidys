@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Details</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/profile_detail.css">
+</head>
+<body>
+    <div class="content">
+        <div class="navbar">
+            <div class="back-icon">
+                <img src="https://cdn-icons-png.flaticon.com/512/109/109618.png" alt="Back" id="backButton">
+            </div>
+            <h1>Profile Details</h1>
+        </div>
+        <div class="profile-details">
+            <img src="images/profile.jpg" alt="Profile Picture" id="profileImage">
+            <div>
+                <h2 id="profileName">Name</h2>
+                <p id="profileEmail">Email: </p>
+                <p id="profileRole">Role: </p>
+                <p id="profileJoined">Joined: </p>
+                <input type="file" id="profileImageInput" accept="image/*">
+            </div>
+        </div>
+        <form id="profileForm">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email">
+            </div>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name">
+            </div>
+            <div class="form-group">
+                <label for="password">New Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Enter new password">
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" class="form-control" id="confirm-password" placeholder="Confirm new password">
+            </div>
+            <button type="submit" class="btn btn-submit">Save Changes</button>
+        </form>
+    </div>
+    <script src="js/profile_detail.js"></script>
+</body>
+</html>

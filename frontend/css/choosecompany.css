@@ -74,7 +74,6 @@ nav ul li a.logout:hover {
     flex-direction: column;
 }
 
-/* Add these lines for tooltip styling if not already present */
 .profile[title] {
     position: relative;
 }
@@ -98,7 +97,6 @@ nav ul li a.logout:hover {
 .profile[title]:hover::after {
     opacity: 1;
 }
-
 
 .username {
     font-weight: bold;
@@ -138,12 +136,12 @@ nav ul li a.logout:hover {
     font-size: 24px;
 }
 
-.services {
+.choose-service {
     padding: 40px;
     background-color: #fff;
 }
 
-.services h2 {
+.choose-service h2 {
     text-align: center;
     font-size: 32px;
     margin-bottom: 20px;
@@ -151,7 +149,7 @@ nav ul li a.logout:hover {
 
 .services-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     justify-items: center;
 }
@@ -163,8 +161,8 @@ nav ul li a.logout:hover {
 }
 
 .service img {
-    width: 500px;  /* Adjusted width for consistency */
-    height: 500px; /* Adjusted height for consistency */
+    width: 200px;
+    height: 200px;
     object-fit: cover;
     border-radius: 10px;
 }

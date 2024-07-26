@@ -1,0 +1,61 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+}
+
+.content {
+    margin-left: 20px;
+    padding: 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.navbar .back-icon img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.navbar h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.profile-details {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-details img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+}
+
+.profile-details input[type="file"] {
+    margin-top: 10px;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+.btn-submit {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    background-color: #0056b3;
+}

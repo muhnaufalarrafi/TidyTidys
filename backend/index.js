@@ -9,6 +9,7 @@ import AuthRoute from "./routes/AuthRoute.js";
 import CompanyProfileRoute from "./routes/CompanyProfileRoute.js";
 import ServiceRoute from "./routes/ServiceRoute.js";
 
+
 dotenv.config();
 
 const app = express();
